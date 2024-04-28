@@ -21,10 +21,12 @@ mb_arr = []
 first = True
 while True:
     if not first:
+        # TODO: Data validation
         chk = input("Enter another need (y/n): ")
         if chk == "n":
             break
     first = False
+    # TODO: Data validation
     category = input("Enter this need's category: ")
     amount,amt_freq,amt_freq_unit = input("Enter the amount spent, the frequency it is spent in (ex. 500 14 d): ").split()
     tmp_mb = mb.MoneyBags(category, amount, amt_freq, amt_freq_unit)
